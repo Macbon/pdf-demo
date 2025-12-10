@@ -1,0 +1,210 @@
+/* SVG 标识框样式 - 外部 CSS 文件 */
+
+/* ========== 基础样式 ========== */
+
+.svg-rect {
+  fill: transparent;
+  stroke-width: 1px;
+  pointer-events: auto !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ========== Active 状态 ========== */
+
+.svg-rect.active {
+  fill-opacity: 0.15;
+  stroke-width: 2px;
+}
+
+/* ========== 不同类型的颜色 ========== */
+
+/* 段落 - 蓝色 */
+.svg-rect.paragraph {
+  stroke: rgba(72, 119, 255, 0.7);
+}
+
+.svg-rect.paragraph.active {
+  fill: rgba(72, 119, 255, 0.15);
+  stroke: rgb(72, 119, 255);
+  stroke-width: 2px;
+}
+
+/* 文本块 - 蓝色 */
+.svg-rect.textblock {
+  stroke: rgba(72, 119, 255, 0.7);
+}
+
+.svg-rect.textblock.active {
+  fill: rgba(72, 119, 255, 0.15);
+  stroke: rgb(72, 119, 255);
+  stroke-width: 2px;
+}
+
+/* 文本 - 红色 */
+.svg-rect.text {
+  stroke: rgba(217, 65, 65, 0.7);
+}
+
+.svg-rect.text.active {
+  fill: rgba(217, 65, 65, 0.15);
+  stroke: rgb(217, 65, 65);
+  stroke-width: 2px;
+}
+
+/* 表格 - 绿色 */
+.svg-rect.table {
+  stroke: rgba(17, 163, 95, 0.7);
+}
+
+.svg-rect.table.active {
+  fill: rgba(17, 163, 95, 0.15);
+  stroke: rgb(17, 163, 95);
+  stroke-width: 2px;
+}
+
+/* 图片 - 橙黄色 */
+.svg-rect.image {
+  stroke: rgba(189, 141, 28, 0.7);
+}
+
+.svg-rect.image.active {
+  fill: rgba(189, 141, 28, 0.15);
+  stroke: rgb(189, 141, 28);
+  stroke-width: 2px;
+}
+
+/* 公式 - 红色 */
+.svg-rect.formula {
+  stroke: rgba(217, 65, 65, 0.7);
+}
+
+.svg-rect.formula.active {
+  fill: rgba(217, 65, 65, 0.15);
+  stroke: rgb(217, 65, 65);
+  stroke-width: 2px;
+}
+
+/* 手写 - 紫色 */
+.svg-rect.handwriting {
+  stroke: rgba(156, 50, 209, 0.7);
+}
+
+.svg-rect.handwriting.active {
+  fill: rgba(156, 50, 209, 0.15);
+  stroke: rgb(156, 50, 209);
+  stroke-width: 2px;
+}
+
+/* 标题 - 蓝色 */
+.svg-rect.title.active,
+.svg-rect.text_title.active {
+  fill: rgba(72, 119, 255, 0.15);
+  stroke: rgb(72, 119, 255);
+  stroke-width: 2px;
+}
+
+/* 页眉页脚 - 灰蓝色 */
+.svg-rect.header_footer.active,
+.svg-rect.edge.active {
+  fill: rgba(99, 117, 153, 0.15);
+  stroke: rgb(99, 117, 153);
+  stroke-width: 2px;
+}
+
+/* 印章 - 棕色 */
+.svg-rect.stamp.active {
+  fill: rgba(173, 88, 26, 0.15);
+  stroke: rgb(173, 88, 26);
+  stroke-width: 2px;
+}
+
+/* 图片标题 */
+.svg-rect.image_title {
+  stroke: rgba(99, 102, 241, 0.7);
+}
+
+.svg-rect.image_title.active {
+  fill: rgba(99, 102, 241, 0.15);
+  stroke: rgb(99, 102, 241);
+  stroke-width: 2px;
+}
+
+/* ========== 表格单元格样式 ========== */
+
+.svg-cell {
+  fill: transparent;
+  stroke: rgba(17, 163, 95, 1);
+  stroke-width: 1px;
+  pointer-events: auto !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  vector-effect: non-scaling-stroke;
+}
+
+.svg-cell.active {
+  fill: rgba(17, 163, 95, 0.15);
+  stroke-width: 2px;
+}
+
+.svg-cell:hover {
+  fill: rgba(17, 163, 95, 0.08);
+}
+
+/* ========== 表格单元格容器 ========== */
+
+.cell-g-wrapper {
+  pointer-events: auto !important;
+}
+
+.cell-g-wrapper polygon.table {
+  pointer-events: auto !important;
+}
+
+/* 隐藏单元格状态 */
+.cell-g-wrapper.cell-g-hidden path {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cell-g-wrapper.cell-g-hidden .cell-toggle-hidden {
+  display: none;
+}
+
+.cell-g-wrapper:not(.cell-g-hidden) .cell-toggle-show {
+  display: none;
+}
+
+/* 表格悬停效果 */
+.cell-g-wrapper-hover .cell-toggle {
+  opacity: 1;
+}
+
+.cell-toggle {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  pointer-events: auto !important;
+}
+
+.cell-toggle:hover {
+  opacity: 1;
+}
+
+/* 隐藏状态下的整表框 */
+.cell-g-wrapper.cell-g-hidden polygon.table.active {
+  fill: rgba(17, 163, 95, 0.15);
+}
+
+/* ========== 其他元素 ========== */
+
+.rect-label-bg {
+  opacity: 0.9;
+}
+
+.rect-label-text {
+  user-select: none;
+  pointer-events: none;
+}
+
